@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppEmergencia.Views.Wallet.CopBalancePage"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:control="clr-namespace:AppEmergencia.Controls"
+    xmlns:converter="clr-namespace:AppEmergencia.Converters"
+    xmlns:helper="clr-namespace:AppEmergencia.Helpers"
+    xmlns:viewModel="clr-namespace:AppEmergencia.ViewModels.Wallet"
+    Title="Estado de cuenta"    
+    BackgroundColor="{DynamicResource Gray-100}"
+    NavigationPage.HasNavigationBar="True">
+
+
+</ContentPage>

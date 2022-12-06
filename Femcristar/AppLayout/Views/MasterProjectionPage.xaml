@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:AppEmergencia.Views.General"
+    xmlns:pwallet="clr-namespace:AppEmergencia.Views.Wallet"
+    x:Class="AppEmergencia.AppLayout.Views.MasterProjectionPage"
+    xmlns:controls="clr-namespace:AppEmergencia.AppLayout.Controls;assembly=AppEmergencia"
+    xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:viewModels="clr-namespace:AppEmergencia.AppLayout.ViewModels;assembly=AppEmergencia"
+    xmlns:views="clr-namespace:AppEmergencia.AppLayout.Views;assembly=AppEmergencia"
+    Title="{StaticResource HomePageTitle}"
+    Style="{StaticResource ContentPageStyle}">
+
+    <MasterDetailPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="gradient:SfGradientView">
+                <Setter Property="BackgroundBrush">
+                    <Setter.Value>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Offset="0" Color="{DynamicResource PrimaryColor}" />
+                                <gradient:SfGradientStop Offset="1" Color="{DynamicResource PrimaryGradient}" />
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </MasterDetailPage.Resources>
+
+    <MasterDetailPage.Master>
+        <pages:MenuPage/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage
+            BarTextColor="White"
+            BarBackgroundColor="#713d74"
+            x:Name="Navigator">
+            <x:Arguments>
+                <pwallet:CopSimulatorPage></pwallet:CopSimulatorPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
